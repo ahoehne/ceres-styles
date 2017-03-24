@@ -9,7 +9,6 @@ use Plenty\Plugin\Templates\Twig;
 
 class CeresElectronicServiceProvider extends ServiceProvider
 {
-    const EVENT_LISTENER_PRIORITY = 101;
 
     /**
      * Register the service provider.
@@ -25,7 +24,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
         $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
             $partial->set('head', 'CeresElectronic::PageDesign.Partials.Head');
 
-        }, self::EVENT_LISTENER_PRIORITY);
+        });
 
          // provide template to use for single items
         $eventDispatcher->listen('IO.tpl.item', function(TemplateContainer $container,  $templateData) {
