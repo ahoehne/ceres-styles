@@ -8,7 +8,6 @@
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
 
 {% block PageBody %}
-    <link rel="stylesheet" href="{{ plugin_path('CeresElectronic') }}/css/main.css">
 
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.VariationImageList" ) }}
