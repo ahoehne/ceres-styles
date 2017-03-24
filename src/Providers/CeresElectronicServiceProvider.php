@@ -9,7 +9,7 @@ use Plenty\Plugin\Templates\Twig;
 
 class CeresElectronicServiceProvider extends ServiceProvider
 {
-    const EVENT_LISTENER_PRIORITY = 99;
+    const EVENT_LISTENER_PRIORITY = 101;
 
     /**
      * Register the service provider.
