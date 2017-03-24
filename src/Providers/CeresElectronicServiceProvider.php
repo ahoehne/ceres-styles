@@ -21,11 +21,6 @@ class CeresElectronicServiceProvider extends ServiceProvider
     public function boot (Twig $twig, Dispatcher $eventDispatcher)
     {
 
-        $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
-            $partial->set('head', 'CeresElectronic::PageDesign.Partials.Head');
-
-        });
-
          // provide template to use for single items
         $eventDispatcher->listen('IO.tpl.item', function(TemplateContainer $container,  $templateData) {
             $container->setTemplate("CeresElectronic::Item.SingleItem");
